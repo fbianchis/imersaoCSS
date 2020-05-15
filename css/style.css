@@ -1,12 +1,43 @@
+/*reset css*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background-image: url('http://www.vanessametonini.com.br/imersaocss/a1/img/fundo.jpg');
+    background-image: url('../img/fundo.jpg');
     background-size: auto 100vh;
     font-family: Arial, Helvetica, sans-serif;
     height: 100vh;
+    font-size: 12px; 
+}
+
+/* se a tela tiver pelo menos 400px vai carregar estes estilos*/
+@media (min-width: 400px) {
+    body {
+        font-size:14px; 
+    }
+}
+
+@media (min-width: 600px) {
+    body {
+        font-size:18px; 
+    }
+}
+
+header {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
 }
 
 .menu {
     background-color: white;
+    position: fixed;
+    top: 0;
+    width: 100vw;
 }
 .menu ul {
     display: flex;
@@ -16,6 +47,10 @@ body {
     list-style: none;
 }
 
+.menu a {
+    display: block;
+    padding: 10px 20px;
+}
 a {
     color : teal;
     text-decoration: none;
@@ -33,4 +68,9 @@ a:hover {
 
 .site-subtitle{
     font-style: italic;
+}
+
+.img-portfolio {
+    width: 180px;
+    height: 180px;
 }
